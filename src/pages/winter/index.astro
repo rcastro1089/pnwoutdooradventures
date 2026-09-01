@@ -1,0 +1,240 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const resorts = [
+  {
+    name: "Stevens Pass",
+    elevation: "5,845 ft",
+    runs: 52,
+    snowfall: "450 inches/year",
+    price: "$80-170/day",
+    distance: "2 hours from Seattle",
+    image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800",
+    rating: 4.7,
+  },
+  {
+    name: "Snoqualmie Pass",
+    elevation: "5,400 ft",
+    runs: 48,
+    snowfall: "400 inches/year",
+    price: "$60-130/day",
+    distance: "1 hour from Seattle",
+    image: "https://images.unsplash.com/photo-1565992441121-4367c2967103?w=800",
+    rating: 4.5,
+  },
+  {
+    name: "Crystal Mountain",
+    elevation: "7,012 ft",
+    runs: 60,
+    snowfall: "500 inches/year",
+    price: "$90-180/day",
+    distance: "2.5 hours from Seattle",
+    image: "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=800",
+    rating: 4.8,
+  },
+  {
+    name: "Leavenworth Mountain",
+    elevation: "5,600 ft",
+    runs: 30,
+    snowfall: "350 inches/year",
+    price: "$50-100/day",
+    distance: "2 hours from Seattle",
+    image: "https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=800",
+    rating: 4.6,
+  },
+];
+---
+
+<BaseLayout
+  title="Skiing & Winter Sports Near Seattle"
+  description="Discover the best skiing, snowboarding, and winter sports near Seattle, Washington. Compare Stevens Pass, Snoqualmie, Crystal Mountain and more."
+>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative h-[400px] md:h-[500px] flex items-center">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1920"
+        alt="Skiing in PNW"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70"></div>
+    </div>
+    <div class="container-custom relative z-10">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          Skiing & Winter Sports Near Seattle
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 mb-8">
+          From world-class skiing to cozy snowshoeing trails, discover winter adventures in the Cascades.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#resorts" class="btn-primary">Ski Resorts</a>
+          <a href="#snowshoeing" class="btn-secondary border-white text-white hover:bg-white hover:text-gray-900">Snowshoeing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-lg text-gray-600 mb-6">
+          Washington State is home to some of the best skiing in North America. The Cascade Mountains receive heavy snowfall each year, creating perfect conditions for skiing, snowboarding, and snowshoeing. With four major ski resorts within driving distance of Seattle, winter sports enthusiasts have plenty of options.
+        </p>
+
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 p-6 bg-gray-50 rounded-2xl">
+          <div class="text-center">
+            <p class="text-3xl font-bold text-primary">4</p>
+            <p class="text-sm text-gray-600">Resorts</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-bold text-primary">190+</p>
+            <p class="text-sm text-gray-600">Runs</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-bold text-primary">1,700"</p>
+            <p class="text-sm text-gray-600">Avg Snowfall</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-bold text-primary">1-2.5hr</p>
+            <p class="text-sm text-gray-600">From Seattle</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resort Listings -->
+  <section class="section-padding bg-gray-50" id="resorts">
+    <div class="container-custom">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Compare Ski Resorts</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {resorts.map((resort) => (
+          <div class="card flex flex-col md:flex-row">
+            <div class="md:w-1/2 aspect-[16/10] md:aspect-auto overflow-hidden">
+              <img src={resort.image} alt={resort.name} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="md:w-1/2 p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <span class="font-medium">{resort.rating}</span>
+              </div>
+              <h3 class="font-semibold text-xl text-gray-900 mb-2">{resort.name}</h3>
+              <p class="text-sm text-gray-500 mb-3">{resort.distance}</p>
+              
+              <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+                <div>
+                  <p class="text-gray-500">Elevation</p>
+                  <p class="font-medium">{resort.elevation}</p>
+                </div>
+                <div>
+                  <p class="text-gray-500">Runs</p>
+                  <p class="font-medium">{resort.runs}</p>
+                </div>
+                <div>
+                  <p class="text-gray-500">Snowfall</p>
+                  <p class="font-medium">{resort.snowfall}</p>
+                </div>
+                <div>
+                  <p class="text-gray-500">Price</p>
+                  <p class="font-medium text-primary">{resort.price}</p>
+                </div>
+              </div>
+              
+              <a href={`#${resort.name.toLowerCase().replace(/\s+/g, '-')}`} class="btn-pill text-sm">
+                Learn More
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Snowshoeing -->
+  <section class="section-padding bg-white" id="snowshoeing">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Snowshoeing Near Seattle</h2>
+        <p class="text-gray-600 mb-6">
+          Not ready for the slopes? Snowshoeing is a fantastic way to experience winter in the Cascades. Many ski resorts offer snowshoe rentals and guided tours, and there are numerous trails throughout the mountains perfect for a winter trek.
+        </p>
+        <p class="text-gray-600 mb-6">
+          <strong>Top Snowshoeing Spots:</strong>
+        </p>
+        <ul class="space-y-2 text-gray-600 mb-6">
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            Gold Creek Pond - Easy, scenic, family-friendly
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            Mount Rainier Paradise - Stunning views, moderate terrain
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            Stevens Pass Nordic Center - Groomed trails, rentals available
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Winter Tips -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Winter Sports Tips</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="p-6 bg-white rounded-2xl">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">🚗 Check Road Conditions</h3>
+            <p class="text-gray-600">Mountain passes can be treacherous. Check WSDOT for road conditions and carry chains.</p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">⏰ Beat the Crowd</h3>
+            <p class="text-gray-600">Weekends are packed. Consider midweek skiing for shorter lift lines and better parking.</p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">🧥 Layer Up</h3>
+            <p class="text-gray-600">Pacific Northwest snow is wet and heavy. Dress in layers and bring waterproof outerwear.</p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">📱 Download Apps</h3>
+            <p class="text-gray-600">Use resort apps for lift status, trail maps, and snow reports before you head out.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-primary">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Get Our Winter Sports Guide</h2>
+      <p class="text-white/80 max-w-2xl mx-auto mb-8">
+        Complete guide to skiing, snowboarding, and snowshoeing near Seattle. Resort comparisons, tips, and insider knowledge.
+      </p>
+      <a href="/products/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+        Download Guide — $29
+      </a>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

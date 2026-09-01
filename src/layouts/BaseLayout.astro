@@ -1,0 +1,157 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+}
+
+const {
+  title,
+  description,
+  canonical = Astro.url.pathname,
+  ogImage = "/og-default.jpg",
+  ogType = "website",
+} = Astro.props;
+
+const siteTitle = "PNW Outdoor Adventures";
+const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
+const canonicalUrl = new URL(canonical, "https://pnwoutdooradventures.com").href;
+const ogImageUrl = new URL(ogImage, "https://pnwoutdooradventures.com").href;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta -->
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content={siteTitle} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: siteTitle,
+      url: "https://pnwoutdooradventures.com",
+      description: "Discover the best hiking, camping, and outdoor adventures in the Pacific Northwest.",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://pnwoutdooradventures.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    })} />
+  </head>
+  <body class="font-sans text-gray-900 bg-white antialiased">
+    <slot name="header" />
+
+    <main>
+      <slot />
+    </main>
+
+    <slot name="footer" />
+  </body>
+</html>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      @apply min-h-screen;
+    }
+
+    img {
+      @apply max-w-full h-auto;
+    }
+  }
+
+  @layer components {
+    .container-custom {
+      @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    .section-padding {
+      @apply py-16 md:py-24;
+    }
+
+    .btn-primary {
+      @apply inline-flex items-center justify-center px-6 py-3 
+             bg-primary text-white font-medium rounded-lg
+             transition-all duration-200 ease-in-out
+             hover:bg-primary-dark hover:shadow-lg hover:-translate-y-0.5
+             focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    }
+
+    .btn-secondary {
+      @apply inline-flex items-center justify-center px-6 py-3 
+             bg-transparent text-primary font-medium rounded-lg border-2 border-primary
+             transition-all duration-200 ease-in-out
+             hover:bg-primary hover:text-white
+             focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    }
+
+    .btn-pill {
+      @apply inline-flex items-center justify-center px-4 py-2 
+             bg-transparent text-primary font-medium rounded-full border border-primary
+             transition-all duration-200 ease-in-out
+             hover:bg-primary hover:text-white;
+    }
+
+    .card {
+      @apply bg-white rounded-2xl shadow-card overflow-hidden
+             transition-all duration-300 ease-in-out
+             hover:shadow-card-hover hover:-translate-y-1;
+    }
+
+    .badge-easy {
+      @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium
+             bg-green-100 text-green-800;
+    }
+
+    .badge-moderate {
+      @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium
+             bg-yellow-100 text-yellow-800;
+    }
+
+    .badge-hard {
+      @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium
+             bg-red-100 text-red-800;
+    }
+  }
+</style>

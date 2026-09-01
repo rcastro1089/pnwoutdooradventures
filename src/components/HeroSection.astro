@@ -1,0 +1,99 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  image?: string;
+  showSearch?: boolean;
+}
+
+const {
+  title,
+  subtitle = "Discover the best hiking, camping, and outdoor adventures in the Pacific Northwest.",
+  image = "/images/hero-bg.jpg",
+  showSearch = true,
+} = Astro.props;
+---
+
+<section class="relative min-h-[600px] md:min-h-[700px] flex items-center">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img
+      src={image}
+      alt="PNW Landscape"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="container-custom relative z-10 py-20">
+    <div class="max-w-3xl mx-auto text-center">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm mb-6">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        Pacific Northwest
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
+        {title}
+      </h1>
+
+      <!-- Subtitle -->
+      {subtitle && (
+        <p class="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+          {subtitle}
+        </p>
+      )}
+
+      <!-- Search Bar -->
+      {showSearch && (
+        <div class="max-w-xl mx-auto">
+          <form class="relative">
+            <input
+              type="text"
+              placeholder="Search trails, campgrounds, activities..."
+              class="w-full px-6 py-4 pr-14 bg-white rounded-full text-gray-900 placeholder-gray-500 shadow-lg focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+            <button
+              type="submit"
+              class="absolute right-2 top-1/2 -translate-y-1/2 p-3 bg-primary text-white rounded-full hover:bg-primary-dark transition-colors"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      )}
+
+      <!-- Quick Stats -->
+      <div class="flex flex-wrap justify-center gap-8 mt-10">
+        <div class="text-center">
+          <p class="text-3xl font-bold text-white">50+</p>
+          <p class="text-sm text-white/70">Trails</p>
+        </div>
+        <div class="text-center">
+          <p class="text-3xl font-bold text-white">20+</p>
+          <p class="text-sm text-white/70">Campsites</p>
+        </div>
+        <div class="text-center">
+          <p class="text-3xl font-bold text-white">15+</p>
+          <p class="text-sm text-white/70">Guides</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <a href="#featured" class="text-white/70 hover:text-white transition-colors">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </a>
+  </div>
+</section>

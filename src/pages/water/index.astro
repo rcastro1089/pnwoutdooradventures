@@ -1,0 +1,199 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const activities = [
+  {
+    name: "Kayaking Lake Union",
+    type: "Kayaking",
+    difficulty: "Easy",
+    location: "Seattle, WA",
+    description: "Paddle through Seattle's iconic houseboats and enjoy stunning views of the city skyline from the water.",
+    image: "https://images.unsplash.com/photo-1472745942893-4b9f730c7668?w=800",
+    price: "$25-40/hour",
+  },
+  {
+    name: "San Juan Islands Kayak Tour",
+    type: "Kayaking",
+    difficulty: "Moderate",
+    location: "San Juan Islands, WA",
+    description: "Multi-day kayak camping adventure through the beautiful San Juan Islands. Watch for orcas and seals.",
+    image: "https://images.unsplash.com/photo-1440778303588-435521a205bc?w=800",
+    price: "$150-300/day",
+  },
+  {
+    name: "Paddleboarding Green Lake",
+    type: "Paddleboarding",
+    difficulty: "Easy",
+    location: "Seattle, WA",
+    description: "Stand-up paddleboarding on calm waters perfect for beginners. Great views and easy access.",
+    image: "https://images.unsplash.com/photo-1502680390548-bdbac40a9b25?w=800",
+    price: "$20-35/hour",
+  },
+  {
+    name: "Puget Sound Sailing",
+    type: "Sailing",
+    difficulty: "Moderate",
+    location: "Seattle, WA",
+    description: "Sail through the stunning waters of Puget Sound with views of the Olympic Mountains.",
+    image: "https://images.unsplash.com/photo-1534224039826-c7a0eda0e6b3?w=800",
+    price: "$50-100/hour",
+  },
+  {
+    name: "Lake Washington Paddle",
+    type: "Paddleboarding",
+    difficulty: "Easy",
+    location: "Bellevue, WA",
+    description: "Explore the shoreline of Lake Washington with easy paddling routes and beautiful views.",
+    image: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800",
+    price: "$25-40/hour",
+  },
+  {
+    name: "Whitewater Rafting Skykomish",
+    type: "Rafting",
+    difficulty: "Hard",
+    location: "Index, WA",
+    description: "Exciting whitewater rafting on the Skykomish River with Class III-IV rapids.",
+    image: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800",
+    price: "$100-150/person",
+  },
+];
+---
+
+<BaseLayout
+  title="Water Activities Near Seattle"
+  description="Discover the best kayaking, paddleboarding, sailing, and water activities near Seattle, Washington. From calm lakes to exciting whitewater adventures."
+>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative h-[400px] md:h-[500px] flex items-center">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1472745942893-4b9f730c7668?w=1920"
+        alt="Water activities in PNW"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70"></div>
+    </div>
+    <div class="container-custom relative z-10">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          Water Activities Near Seattle
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 mb-8">
+          Kayaking, paddleboarding, sailing, and more. Explore the stunning waterways of the Pacific Northwest.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#kayaking" class="btn-primary">Kayaking</a>
+          <a href="#paddleboarding" class="btn-secondary border-white text-white hover:bg-white hover:text-gray-900">Paddleboarding</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-lg text-gray-600 mb-6">
+          Seattle is surrounded by water. From Puget Sound to Lake Washington, the city offers incredible opportunities for water-based adventures. Whether you're looking for a peaceful paddle through houseboat neighborhoods or an adrenaline-pumping whitewater experience, the PNW has it all.
+        </p>
+
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 p-6 bg-gray-50 rounded-2xl">
+          <div class="text-center">
+            <p class="text-3xl font-bold text-primary">15+</p>
+            <p class="text-sm text-gray-600">Activities</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-bold text-primary">10+</p>
+            <p class="text-sm text-gray-600">Locations</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-bold text-primary">$20-300</p>
+            <p class="text-sm text-gray-600">Price Range</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-bold text-primary">4.6</p>
+            <p class="text-sm text-gray-600">Avg Rating</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activity Listings -->
+  <section class="section-padding bg-gray-50" id="kayaking">
+    <div class="container-custom">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Top Water Activities</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {activities.map((activity) => (
+          <div class="card">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img src={activity.image} alt={activity.name} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">{activity.type}</span>
+                <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">{activity.difficulty}</span>
+              </div>
+              <h3 class="font-semibold text-lg text-gray-900 mb-1">{activity.name}</h3>
+              <p class="text-sm text-gray-500 mb-2">{activity.location}</p>
+              <p class="text-sm text-gray-600 mb-3">{activity.description}</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">{activity.price}</span>
+                <a href="#" class="text-sm font-medium text-primary hover:underline">Learn More</a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Water Safety -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Water Safety Tips</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="p-6 bg-gray-50 rounded-2xl">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">🦺 Always Wear a PFD</h3>
+            <p class="text-gray-600">Personal flotation devices save lives. Even strong swimmers should wear one on the water.</p>
+          </div>
+          <div class="p-6 bg-gray-50 rounded-2xl">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">🌡️ Cold Water Awareness</h3>
+            <p class="text-gray-600">PNW waters are cold year-round. Hypothermia is a real risk—dress appropriately and know the signs.</p>
+          </div>
+          <div class="p-6 bg-gray-50 rounded-2xl">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">🌊 Check Conditions</h3>
+            <p class="text-gray-600">Tides, currents, and weather can change quickly. Always check conditions before heading out.</p>
+          </div>
+          <div class="p-6 bg-gray-50 rounded-2xl">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">👥 Buddy System</h3>
+            <p class="text-gray-600">Never paddle alone. Always go with a friend or join a guided tour for safety.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-primary">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Get Our Water Activities Guide</h2>
+      <p class="text-white/80 max-w-2xl mx-auto mb-8">
+        Complete guide to kayaking, paddleboarding, and water adventures near Seattle. Rentals, tours, and hidden gems.
+      </p>
+      <a href="/products/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+        Download Guide — $29
+      </a>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

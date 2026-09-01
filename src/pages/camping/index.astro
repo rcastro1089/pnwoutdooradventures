@@ -1,0 +1,205 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const campgrounds = [
+  {
+    name: "Deception Pass State Park",
+    location: "Whidbey Island, WA",
+    sites: 280,
+    price: "$12-35/night",
+    rating: 4.8,
+    image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800",
+    features: ["Beach", "Hiking", "Fishing", "Boat Launch"],
+  },
+  {
+    name: "Salt Creek Recreation Area",
+    location: "Port Angeles, WA",
+    sites: 90,
+    price: "$25-35/night",
+    rating: 4.7,
+    image: "https://images.unsplash.com/photo-1487730116645-74489c95b41b?w=800",
+    features: ["Tide Pools", "Ocean Views", "Hiking"],
+  },
+  {
+    name: "Gold Creek Pond",
+    location: "Snoqualmie Pass, WA",
+    sites: 10,
+    price: "$15-25/night",
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1476041800959-2f6bb412c8ce?w=800",
+    features: ["Alpine Lake", "Easy Access", "Scenic"],
+  },
+  {
+    name: "Olympic Peninsula Camps",
+    location: "Olympic National Park, WA",
+    sites: 15,
+    price: "$20-30/night",
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1510312305653-8ed496efae75?w=800",
+    features: ["Rainforest", "Coast", "Mountain"],
+  },
+  {
+    name: "Mount Rainier Camps",
+    location: "Mount Rainier National Park, WA",
+    sites: 20,
+    price: "$20-25/night",
+    rating: 4.8,
+    image: "https://images.unsplash.com/photo-1517816428104-797678c7cf0c?w=800",
+    features: ["Glacier Views", "Wildflowers", "Alpine"],
+  },
+  {
+    name: "Steven's Pass Area",
+    location: "Leavenworth, WA",
+    sites: 25,
+    price: "$15-30/night",
+    rating: 4.6,
+    image: "https://images.unsplash.com/photo-1475483768296-6163e08872a1?w=800",
+    features: ["Mountain Views", "Hiking", "Skiing"],
+  },
+];
+---
+
+<BaseLayout
+  title="Best Campgrounds Near Seattle"
+  description="Find the best campgrounds near Seattle, Washington. From beach camping to alpine sites, discover your perfect outdoor getaway with our complete camping guide."
+>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative h-[400px] md:h-[500px] flex items-center">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1920"
+        alt="Camping in PNW"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70"></div>
+    </div>
+    <div class="container-custom relative z-10">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          Best Campgrounds Near Seattle
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 mb-8">
+          From beach camping to alpine sites, discover your perfect outdoor getaway in the Pacific Northwest.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#state-parks" class="btn-primary">State Parks</a>
+          <a href="#national-parks" class="btn-secondary border-white text-white hover:bg-white hover:text-gray-900">National Parks</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-lg text-gray-600 mb-6">
+          Washington State offers some of the best camping in the country. From the rugged Pacific coastline to the towering Cascades, you'll find campsites ranging from primitive backcountry sites to full-service RV parks. Whether you're a first-time camper or a seasoned outdoors enthusiast, our guide covers the top camping destinations near Seattle.
+        </p>
+
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 p-6 bg-gray-50 rounded-2xl">
+          <div class="text-center">
+            <p class="text-3xl font-bold text-primary">20+</p>
+            <p class="text-sm text-gray-600">Campgrounds</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-bold text-primary">500+</p>
+            <p class="text-sm text-gray-600">Sites</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-bold text-primary">$12-40</p>
+            <p class="text-sm text-gray-600">Per Night</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-bold text-primary">4.7</p>
+            <p class="text-sm text-gray-600">Avg Rating</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campground Listings -->
+  <section class="section-padding bg-gray-50" id="state-parks">
+    <div class="container-custom">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Top Campgrounds</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {campgrounds.map((camp) => (
+          <div class="card">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img src={camp.image} alt={camp.name} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <span class="font-medium">{camp.rating}</span>
+              </div>
+              <h3 class="font-semibold text-lg text-gray-900 mb-1">{camp.name}</h3>
+              <p class="text-sm text-gray-500 mb-3">{camp.location}</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                {camp.features.map((feature) => (
+                  <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">{feature}</span>
+                ))}
+              </div>
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-gray-600">{camp.sites} sites</span>
+                <span class="font-medium text-primary">{camp.price}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Camping Tips -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Camping Tips for the PNW</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="p-6 bg-gray-50 rounded-2xl">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">📅 Book Early</h3>
+            <p class="text-gray-600">Popular campgrounds fill up months in advance, especially for summer weekends. Book as early as possible.</p>
+          </div>
+          <div class="p-6 bg-gray-50 rounded-2xl">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">🌧️ Rain-Proof Your Trip</h3>
+            <p class="text-gray-600">PNW camping often means rain. Bring waterproof gear and a good tent with a rainfly.</p>
+          </div>
+          <div class="p-6 bg-gray-50 rounded-2xl">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">🐻 Wildlife Safety</h3>
+            <p class="text-gray-600">Store food in bear-proof containers and keep a clean campsite to avoid attracting wildlife.</p>
+          </div>
+          <div class="p-6 bg-gray-50 rounded-2xl">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">🔦 Night Prep</h3>
+            <p class="text-gray-600">Bring headlamps and lanterns. Summer nights can still be cool—pack warm layers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-primary">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Get Our Complete Camping Guide</h2>
+      <p class="text-white/80 max-w-2xl mx-auto mb-8">
+        20+ campgrounds with detailed reviews, maps, and booking information. Download now and start planning your trip.
+      </p>
+      <a href="/products/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+        Download Guide — $29
+      </a>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

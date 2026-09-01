@@ -1,0 +1,246 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import TrailCard from "../../components/TrailCard.astro";
+
+const trails = [
+  {
+    title: "Rattlesnake Ledge",
+    slug: "rattlesnake-ledge",
+    image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800",
+    location: "North Bend, WA",
+    distance: "4 miles roundtrip",
+    difficulty: "easy" as const,
+    rating: 4.8,
+    reviews: 1247,
+  },
+  {
+    title: "Twin Falls Trail",
+    slug: "twin-falls",
+    image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800",
+    location: "Snoqualmie, WA",
+    distance: "2.6 miles roundtrip",
+    difficulty: "easy" as const,
+    rating: 4.7,
+    reviews: 892,
+  },
+  {
+    title: "Snow Lake Trail",
+    slug: "snow-lake",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+    location: "Snoqualmie Pass, WA",
+    distance: "7 miles roundtrip",
+    difficulty: "moderate" as const,
+    rating: 4.9,
+    reviews: 654,
+  },
+  {
+    title: "Lake Serene Trail",
+    slug: "lake-serene",
+    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800",
+    location: "Index, WA",
+    distance: "7.4 miles roundtrip",
+    difficulty: "moderate" as const,
+    rating: 4.8,
+    reviews: 523,
+  },
+  {
+    title: "Mount Si Trail",
+    slug: "mount-si",
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800",
+    location: "North Bend, WA",
+    distance: "8 miles roundtrip",
+    difficulty: "hard" as const,
+    rating: 4.7,
+    reviews: 1089,
+  },
+  {
+    title: "Wallace Falls Trail",
+    slug: "wallace-falls",
+    image: "https://images.unsplash.com/photo-1432405972618-c6b0c0d40b2f?w=800",
+    location: "Gold Bar, WA",
+    distance: "5.6 miles roundtrip",
+    difficulty: "moderate" as const,
+    rating: 4.6,
+    reviews: 412,
+  },
+  {
+    title: "Granite Mountain",
+    slug: "granite-mountain",
+    image: "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800",
+    location: "Snoqualmie Pass, WA",
+    distance: "8.6 miles roundtrip",
+    difficulty: "hard" as const,
+    rating: 4.8,
+    reviews: 387,
+  },
+  {
+    title: "Tubal Cain Trail",
+    slug: "tubal-cain",
+    image: "https://images.unsplash.com/photo-1445363692815-ebcd599f7621?w=800",
+    location: "Port Angeles, WA",
+    distance: "6.6 miles roundtrip",
+    difficulty: "moderate" as const,
+    rating: 4.5,
+    reviews: 234,
+  },
+];
+
+const easyTrails = trails.filter((t) => t.difficulty === "easy");
+const moderateTrails = trails.filter((t) => t.difficulty === "moderate");
+const hardTrails = trails.filter((t) => t.difficulty === "hard");
+---
+
+<BaseLayout
+  title="Best Hikes Near Seattle"
+  description="Discover the best hiking trails near Seattle, Washington. From easy waterfall walks to challenging mountain summits, find your perfect PNW adventure with our complete trail guide."
+>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative h-[400px] md:h-[500px] flex items-center">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=1920"
+        alt="Hiking in PNW"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70"></div>
+    </div>
+    <div class="container-custom relative z-10">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          Best Hikes Near Seattle
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 mb-8">
+          50+ trails ranked by difficulty, views, and season. Your complete guide to hiking in the Pacific Northwest.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#easy" class="btn-primary">Easy Hikes</a>
+          <a href="#moderate" class="btn-secondary border-white text-white hover:bg-white hover:text-gray-900">Moderate Hikes</a>
+          <a href="#hard" class="btn-secondary border-white text-white hover:bg-white hover:text-gray-900">Hard Hikes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-lg text-gray-600 mb-6">
+          The Pacific Northwest is a hiker's paradise. From the misty forests of the Cascades to the rugged coastline of the Olympics, Washington State offers some of the most spectacular hiking in North America. Whether you're a beginner looking for an easy waterfall walk or an experienced hiker seeking a challenging summit, our guide has you covered.
+        </p>
+        <p class="text-lg text-gray-600 mb-6">
+          Seattle sits at the gateway to countless outdoor adventures. Within an hour's drive, you can be standing on a mountain summit, wandering through an old-growth forest, or gazing at a pristine alpine lake. The trails below represent the best of what the PNW has to offer.
+        </p>
+
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 p-6 bg-gray-50 rounded-2xl">
+          <div class="text-center">
+            <p class="text-3xl font-bold text-primary">50+</p>
+            <p class="text-sm text-gray-600">Trails</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-bold text-primary">500+</p>
+            <p class="text-sm text-gray-600">Miles</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-bold text-primary">50K+</p>
+            <p class="text-sm text-gray-600">Reviews</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-bold text-primary">4.7</p>
+            <p class="text-sm text-gray-600">Avg Rating</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Easy Hikes -->
+  <section class="section-padding bg-gray-50" id="easy">
+    <div class="container-custom">
+      <div class="mb-8">
+        <span class="badge-easy mb-3 inline-block">Beginner Friendly</span>
+        <h2 class="text-3xl font-bold text-gray-900 mb-2">Easy Hikes Near Seattle</h2>
+        <p class="text-gray-600">Perfect for families, beginners, and those looking for a quick outdoor fix.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {easyTrails.map((trail) => <TrailCard {...trail} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Moderate Hikes -->
+  <section class="section-padding bg-white" id="moderate">
+    <div class="container-custom">
+      <div class="mb-8">
+        <span class="badge-moderate mb-3 inline-block">Intermediate</span>
+        <h2 class="text-3xl font-bold text-gray-900 mb-2">Moderate Hikes Near Seattle</h2>
+        <p class="text-gray-600">Great views with a bit more challenge. Some elevation gain and longer distances.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {moderateTrails.map((trail) => <TrailCard {...trail} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Hard Hikes -->
+  <section class="section-padding bg-gray-50" id="hard">
+    <div class="container-custom">
+      <div class="mb-8">
+        <span class="badge-hard mb-3 inline-block">Advanced</span>
+        <h2 class="text-3xl font-bold text-gray-900 mb-2">Hard Hikes Near Seattle</h2>
+        <p class="text-gray-600">For experienced hikers seeking a challenge. Steep elevation and technical terrain.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {hardTrails.map((trail) => <TrailCard {...trail} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Tips Section -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Hiking Tips for the PNW</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="p-6 bg-gray-50 rounded-2xl">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">🌧️ Weather Preparedness</h3>
+            <p class="text-gray-600">PNW weather changes fast. Always bring rain gear, even on sunny days. Layers are your best friend.</p>
+          </div>
+          <div class="p-6 bg-gray-50 rounded-2xl">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">🏔️ Elevation Awareness</h3>
+            <p class="text-gray-600">Many trails gain significant elevation. Start early, pace yourself, and bring plenty of water.</p>
+          </div>
+          <div class="p-6 bg-gray-50 rounded-2xl">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">🦌 Wildlife Safety</h3>
+            <p class="text-gray-600">Black bears and mountain lions live in the Cascades. Carry bear spray and make noise on the trail.</p>
+          </div>
+          <div class="p-6 bg-gray-50 rounded-2xl">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">🅿️ Parking Tips</h3>
+            <p class="text-gray-600">Popular trails fill up early on weekends. Arrive before 8am or use the Discover Pass for state lands.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-primary">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Get Our Complete Trail Guide</h2>
+      <p class="text-white/80 max-w-2xl mx-auto mb-8">
+        50+ trails with detailed descriptions, maps, photos, and insider tips. Download now and start exploring.
+      </p>
+      <a href="/products/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+        Download Guide — $29
+      </a>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

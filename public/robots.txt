@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pnwoutdooradventures.com/sitemap-index.xml

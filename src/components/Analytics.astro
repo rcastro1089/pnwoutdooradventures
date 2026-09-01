@@ -1,0 +1,23 @@
+---
+// Generado por site-pipeline.
+const gaId = import.meta.env.PUBLIC_GA_ID;
+---
+{gaId && (
+  <>
+    <script is:inline define:vars={{ gaId }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      // Consent Mode v2: denegado por defecto hasta que el usuario acepte.
+      gtag('consent', 'default', {
+        ad_storage: 'denied', analytics_storage: 'denied',
+        ad_user_data: 'denied', ad_personalization: 'denied',
+      });
+      if (localStorage.getItem('cookie-consent') === 'granted') {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+      }
+      gtag('js', new Date());
+      gtag('config', gaId);
+    </script>
+    <script is:inline src={'https://www.googletagmanager.com/gtag/js?id=' + gaId} async></script>
+  </>
+)}

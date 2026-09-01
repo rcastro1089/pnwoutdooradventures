@@ -1,0 +1,25 @@
+---
+// Generado por site-pipeline. Banner minimo de consentimiento (el LLM ajusta copy/estilo).
+---
+<div id="cookie-banner" hidden style="position:fixed;bottom:0;left:0;right:0;padding:1rem;background:#111;color:#fff;display:flex;gap:1rem;align-items:center;justify-content:center;flex-wrap:wrap;z-index:50">
+  <span>Usamos cookies para analitica. Puedes aceptar o rechazar.</span>
+  <button id="cookie-accept" type="button">Aceptar</button>
+  <button id="cookie-reject" type="button">Rechazar</button>
+  <a href="/legal/cookies/">Mas info</a>
+</div>
+<script is:inline>
+  (function () {
+    var banner = document.getElementById('cookie-banner');
+    if (!banner) return;
+    if (!localStorage.getItem('cookie-consent')) banner.hidden = false;
+    function set(v) {
+      localStorage.setItem('cookie-consent', v);
+      banner.hidden = true;
+      if (v === 'granted' && window.gtag) {
+        window.gtag('consent', 'update', { analytics_storage: 'granted' });
+      }
+    }
+    document.getElementById('cookie-accept')?.addEventListener('click', function () { set('granted'); });
+    document.getElementById('cookie-reject')?.addEventListener('click', function () { set('denied'); });
+  })();
+</script>

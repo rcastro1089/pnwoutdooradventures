@@ -1,0 +1,35 @@
+version: 1
+preset_version: 1.0.0
+type: content
+domain: pnwoutdooradventures.com
+lang: es-SV
+business:
+  name: PNW Outdoor Adventures
+  address: ""
+  phone: ""
+  geo:
+    lat: 0
+    lng: 0
+features:
+  hasBlog: true
+  formType: none
+  schemaTypes:
+    - Article
+    - FAQPage
+    - BreadcrumbList
+  hasBackend: false
+ga_id: ""
+deploy:
+  target: cf-pages
+  github_repo: rcastro1089/pnwoutdooradventures
+  cf_project_name: ""
+  prod_url: ""
+checks:
+  disable: []
+  thresholds:
+    max_bundle_size_kb: 300
+blog:
+  enabled: true
+  articles_count: 30
+  cron: 0 10 * * 3,6
+  tone: casual-magnetic

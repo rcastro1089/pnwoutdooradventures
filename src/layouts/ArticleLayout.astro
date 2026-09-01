@@ -1,0 +1,108 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  location: string;
+  distance: string;
+  elevation: string;
+  difficulty: "easy" | "moderate" | "hard";
+  time: string;
+}
+
+const {
+  title,
+  description,
+  image,
+  location,
+  distance,
+  elevation,
+  difficulty,
+  time,
+} = Astro.props;
+
+const difficultyConfig = {
+  easy: { label: "Easy", class: "badge-easy" },
+  moderate: { label: "Moderate", class: "badge-moderate" },
+  hard: { label: "Hard", class: "badge-hard" },
+};
+---
+
+<BaseLayout title={title} description={description} ogImage={image}>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative h-[400px] md:h-[500px]">
+    <img src={image} alt={title} class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="container-custom">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <span class={difficultyConfig[difficulty].class}>
+            {difficultyConfig[difficulty].label}
+          </span>
+          <span class="text-white/80 text-sm flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            </svg>
+            {location}
+          </span>
+        </div>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          {title}
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Info Bar -->
+  <section class="bg-white border-b border-gray-100 sticky top-16 md:top-20 z-40">
+    <div class="container-custom">
+      <div class="flex items-center justify-between py-4 overflow-x-auto gap-6">
+        <div class="flex items-center gap-2 text-sm text-gray-600">
+          <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+          </svg>
+          <div>
+            <p class="text-xs text-gray-500">Distance</p>
+            <p class="font-medium">{distance}</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-gray-600">
+          <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+          <div>
+            <p class="text-xs text-gray-500">Elevation</p>
+            <p class="font-medium">{elevation}</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-gray-600">
+          <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <div>
+            <p class="text-xs text-gray-500">Time</p>
+            <p class="font-medium">{time}</p>
+          </div>
+        </div>
+        <a href="#map" class="btn-primary text-sm whitespace-nowrap">
+          View Map
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <article class="container-custom py-12">
+    <div class="max-w-4xl mx-auto">
+      <slot />
+    </div>
+  </article>
+
+  <Footer slot="footer" />
+</BaseLayout>

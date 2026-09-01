@@ -1,0 +1,149 @@
+---
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+
+const trail = {
+  title: "Rattlesnake Ledge Trail",
+  description: "Rattlesnake Ledge is one of the most popular hikes near Seattle, offering stunning views of Rattlesnake Lake and the surrounding Cascades. This 4-mile roundtrip trail is perfect for beginners and families.",
+  image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200",
+  location: "North Bend, WA",
+  distance: "4 miles roundtrip",
+  elevation: "1,160 ft",
+  difficulty: "easy" as const,
+  time: "2-3 hours",
+};
+---
+
+<ArticleLayout {...trail}>
+  <!-- Overview -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Trail Overview</h2>
+    <p class="text-gray-600 mb-4">
+      Rattlesnake Ledge is a must-do hike for anyone visiting the Seattle area. Located just 30 minutes east of the city near North Bend, this trail offers incredible views that make the relatively easy climb well worth the effort.
+    </p>
+    <p class="text-gray-600 mb-4">
+      The trail climbs steadily through a forest of Douglas fir and western red cedar before emerging at the rocky ledge. From here, you'll be rewarded with panoramic views of Rattlesnake Lake, the North Fork Snoqualmie River valley, and the towering peaks of the Cascades.
+    </p>
+
+    <!-- Quick Facts -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 p-4 bg-gray-50 rounded-xl">
+      <div>
+        <p class="text-sm text-gray-500">Distance</p>
+        <p class="font-medium">4 miles RT</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Elevation Gain</p>
+        <p class="font-medium">1,160 ft</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Difficulty</p>
+        <p class="font-medium">Easy</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Time</p>
+        <p class="font-medium">2-3 hours</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Getting There -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Getting There</h2>
+    <p class="text-gray-600 mb-4">
+      From Seattle, take I-90 East to Exit 52 (North Bend). Turn right onto Mount Si Road and follow it for about 2 miles. The trailhead parking lot will be on your right. A Discover Pass is required for parking.
+    </p>
+    <p class="text-gray-600">
+      <strong>Pro tip:</strong> The parking lot fills up quickly on weekends. Arrive before 8am to secure a spot, or visit on a weekday for a more peaceful experience.
+    </p>
+  </section>
+
+  <!-- Trail Description -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Trail Description</h2>
+    <p class="text-gray-600 mb-4">
+      The trail begins at the Rattlesnake Ledge Trailhead parking area. From the trailhead, follow the well-maintained path as it climbs steadily through a beautiful forest. The first mile is relatively gentle, winding through second-growth forest with occasional views through the trees.
+    </p>
+    <p class="text-gray-600 mb-4">
+      Around the halfway point, the trail steepens as you approach the ledge. The final push to the top includes some rocky sections with wooden steps installed to help with the ascent. Take your time and enjoy the changing views as you climb higher.
+    </p>
+    <p class="text-gray-600">
+      At the top, you'll find a large rocky outcrop with multiple viewpoints. The ledge offers 360-degree views of the surrounding mountains and valleys. On clear days, you can see Mount Rainier to the south and the Olympic Mountains to the west.
+    </p>
+  </section>
+
+  <!-- What to Bring -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">What to Bring</h2>
+    <ul class="space-y-2 text-gray-600">
+      <li class="flex items-start gap-2">
+        <svg class="w-5 h-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        Sturdy hiking shoes or boots
+      </li>
+      <li class="flex items-start gap-2">
+        <svg class="w-5 h-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        Water (at least 1 liter)
+      </li>
+      <li class="flex items-start gap-2">
+        <svg class="w-5 h-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        Snacks
+      </li>
+      <li class="flex items-start gap-2">
+        <svg class="w-5 h-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        Rain jacket (PNW weather changes fast)
+      </li>
+      <li class="flex items-start gap-2">
+        <svg class="w-5 h-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        Discover Pass for parking
+      </li>
+      <li class="flex items-start gap-2">
+        <svg class="w-5 h-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        Camera (the views are incredible!)
+      </li>
+    </ul>
+  </section>
+
+  <!-- Best Time to Visit -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Best Time to Visit</h2>
+    <p class="text-gray-600 mb-4">
+      Rattlesnake Ledge is accessible year-round, but the best conditions are from <strong>May through October</strong>. Summer offers the clearest skies and warmest temperatures, while fall brings beautiful autumn colors to the surrounding forest.
+    </p>
+    <p class="text-gray-600">
+      Winter hiking is possible but requires caution—ice and snow can make the upper sections treacherous. Microspikes or crampons are recommended during winter months.
+    </p>
+  </section>
+
+  <!-- Trail Map -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Trail Map</h2>
+    <div class="aspect-video bg-gray-200 rounded-xl overflow-hidden">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2715.123456789!2d-121.7812345!3d47.4312345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDI1JzUyLjUiTiAxMjHCsDQ2JzUyLjUiVw!5e0!3m2!1sen!2sus!4v1234567890"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="p-8 bg-gray-50 rounded-2xl text-center">
+    <h3 class="text-xl font-bold text-gray-900 mb-3">Download Our Complete Rattlesnake Ledge Guide</h3>
+    <p class="text-gray-600 mb-4">Get detailed maps, insider tips, and nearby recommendations.</p>
+    <a href="/products/" class="btn-primary">Get the Guide — $29</a>
+  </section>
+</ArticleLayout>

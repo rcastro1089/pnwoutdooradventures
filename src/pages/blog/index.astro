@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<BaseLayout title="Blog" description="Trail reports, gear reviews, and outdoor tips from the Pacific Northwest.">
+  <Header slot="header" />
+  
+  <section class="section-padding">
+    <div class="container-custom">
+      <h1 class="text-4xl font-bold mb-6">Blog</h1>
+      <p class="text-gray-600 mb-8">Trail reports, gear reviews, and outdoor tips.</p>
+      
+      <div class="card p-6">
+        <p class="text-gray-500">Blog posts coming soon...</p>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>
