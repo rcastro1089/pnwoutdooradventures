@@ -1,4 +1,6 @@
 ---
+import CookieBanner from "../components/CookieBanner.astro";
+
 interface Props {
   title: string;
   description: string;
@@ -17,8 +19,8 @@ const {
 
 const siteTitle = "PNW Outdoor Adventures";
 const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
-const canonicalUrl = new URL(canonical, "https://pnwoutdooradventures.com").href;
-const ogImageUrl = new URL(ogImage, "https://pnwoutdooradventures.com").href;
+const canonicalUrl = new URL(canonical, "https://pnwhikingguide.com").href;
+const ogImageUrl = new URL(ogImage, "https://pnwhikingguide.com").href;
 ---
 
 <!DOCTYPE html>
@@ -62,11 +64,11 @@ const ogImageUrl = new URL(ogImage, "https://pnwoutdooradventures.com").href;
       "@context": "https://schema.org",
       "@type": "WebSite",
       name: siteTitle,
-      url: "https://pnwoutdooradventures.com",
+      url: "https://pnwhikingguide.com",
       description: "Discover the best hiking, camping, and outdoor adventures in the Pacific Northwest.",
       potentialAction: {
         "@type": "SearchAction",
-        target: "https://pnwoutdooradventures.com/search?q={search_term_string}",
+        target: "https://pnwhikingguide.com/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     })} />
@@ -79,6 +81,9 @@ const ogImageUrl = new URL(ogImage, "https://pnwoutdooradventures.com").href;
     </main>
 
     <slot name="footer" />
+
+    <!-- Cookie Consent Banner (CCPA Compliant) -->
+    <CookieBanner />
   </body>
 </html>
 
