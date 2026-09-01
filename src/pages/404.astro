@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout
+  title="Page Not Found"
+  description="The page you're looking for doesn't exist. Check out our hiking trails, campgrounds, and outdoor adventures."
+>
+  <Header slot="header" />
+
+  <section class="section-padding bg-white min-h-[60vh] flex items-center">
+    <div class="container-custom text-center">
+      <div class="max-w-2xl mx-auto">
+        <!-- 404 Number -->
+        <h1 class="text-9xl font-bold text-primary/20 mb-4">404</h1>
+        
+        <!-- Message -->
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          Trail Not Found
+        </h2>
+        <p class="text-lg text-gray-600 mb-8">
+          Looks like you've wandered off the beaten path. This page doesn't exist — but there are plenty of amazing trails that do.
+        </p>
+
+        <!-- Search -->
+        <form class="max-w-md mx-auto mb-8" action="/search" method="GET">
+          <div class="flex gap-2">
+            <input
+              type="text"
+              name="q"
+              placeholder="Search trails, campgrounds..."
+              class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            />
+            <button type="submit" class="btn-primary">
+              Search
+            </button>
+          </div>
+        </form>
+
+        <!-- Quick Links -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <a href="/hiking/" class="p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+            <span class="text-2xl mb-2 block">🥾</span>
+            <span class="font-medium text-gray-900">Hiking</span>
+          </a>
+          <a href="/camping/" class="p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+            <span class="text-2xl mb-2 block">⛺</span>
+            <span class="font-medium text-gray-900">Camping</span>
+          </a>
+          <a href="/winter/" class="p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+            <span class="text-2xl mb-2 block">⛷️</span>
+            <span class="font-medium text-gray-900">Winter</span>
+          </a>
+          <a href="/products/" class="p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+            <span class="text-2xl mb-2 block">📚</span>
+            <span class="font-medium text-gray-900">Guides</span>
+          </a>
+        </div>
+
+        <!-- Back Home -->
+        <div class="mt-8">
+          <a href="/" class="btn-primary">
+            ← Back to Homepage
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

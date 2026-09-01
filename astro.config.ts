@@ -4,7 +4,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://pnwoutdooradventures.com",
+  site: "https://pnwhikingguide.com",
   // trailingSlash debe ser coherente con las canonicals (lo verifica el QA gate).
   trailingSlash: "always",
   integrations: [sitemap(), tailwind()],

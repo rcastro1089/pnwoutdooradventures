@@ -2,6 +2,7 @@
 import BaseLayout from "./BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
 
 interface Props {
   title: string;
@@ -30,10 +31,46 @@ const difficultyConfig = {
   moderate: { label: "Moderate", class: "badge-moderate" },
   hard: { label: "Hard", class: "badge-hard" },
 };
+
+// Article schema
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "image": image,
+  "author": {
+    "@type": "Organization",
+    "name": "PNW Outdoor Adventures"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PNW Outdoor Adventures",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pnwhikingguide.com/favicon.svg"
+    }
+  },
+  "datePublished": new Date().toISOString(),
+  "dateModified": new Date().toISOString()
+};
+
+// Breadcrumb items
+const breadcrumbItems = [
+  { label: "Home", href: "/" },
+  { label: "Hiking", href: "/hiking/" },
+  { label: title }
+];
 ---
 
 <BaseLayout title={title} description={description} ogImage={image}>
   <Header slot="header" />
+
+  <!-- Breadcrumbs -->
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <!-- Article Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
 
   <!-- Hero -->
   <section class="relative h-[400px] md:h-[500px]">

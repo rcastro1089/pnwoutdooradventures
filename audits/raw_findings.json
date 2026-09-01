@@ -1,0 +1,318 @@
+{
+  "meta": {
+    "site": "https://pnwoutdooradventures.pages.dev",
+    "pages_checked": 25,
+    "titles": [
+      {
+        "url": "https://pnwoutdooradventures.com/",
+        "title": "pnwoutdooradventures.com",
+        "title_length": 24,
+        "title_issues": [
+          "SHORT_TITLE(24)"
+        ],
+        "meta": null,
+        "meta_length": 0,
+        "meta_issues": [
+          "MISSING_META"
+        ],
+        "h1_count": 2,
+        "h1s": [
+          "Launching Soon",
+          "Launching Soon"
+        ],
+        "h2_count": 1,
+        "heading_issues": [
+          "MULTIPLE_H1(2)"
+        ]
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/blog/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/blog/lake-serene-trail-guide/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/camping/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/camping/mount-rainier/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/camping/north-cascades/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/camping/olympic-national-park/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/contact/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/hiking/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/hiking/lake-serene/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/hiking/mount-si/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/hiking/rattlesnake-ledge/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/hiking/snow-lake/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/hiking/twin-falls/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/hiking/wallace-falls/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/legal/aviso-legal/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/legal/cookies/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/legal/privacidad/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/nosotros/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/products/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/water/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/winter/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/winter/crystal-mountain/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/winter/snoqualmie-pass/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/winter/stevens-pass/",
+        "error": "HTTP Error 404: Not Found"
+      }
+    ],
+    "duplicate_titles": {},
+    "robots": {
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "issues": [],
+      "body": "User-agent: *\nAllow: /\n\nSitemap: https://pnwoutdooradventures.com/sitemap-index.xml\n"
+    }
+  },
+  "broken_links": {
+    "sitemap": "https://pnwoutdooradventures.pages.dev/sitemap-index.xml",
+    "checked": 0,
+    "broken_count": 0,
+    "broken": [],
+    "redirect_chains": [],
+    "slow": []
+  },
+  "geo": {
+    "url": "https://pnwoutdooradventures.pages.dev",
+    "robots": {
+      "status": "ok",
+      "ai_crawlers": [
+        {
+          "name": "GPTBot",
+          "status": "no_explicit",
+          "blocked": false
+        },
+        {
+          "name": "ChatGPT-User",
+          "status": "no_explicit",
+          "blocked": false
+        },
+        {
+          "name": "OAI-SearchBot",
+          "status": "no_explicit",
+          "blocked": false
+        },
+        {
+          "name": "ClaudeBot",
+          "status": "no_explicit",
+          "blocked": false
+        },
+        {
+          "name": "Claude-Web",
+          "status": "no_explicit",
+          "blocked": false
+        },
+        {
+          "name": "anthropic-ai",
+          "status": "no_explicit",
+          "blocked": false
+        },
+        {
+          "name": "PerplexityBot",
+          "status": "no_explicit",
+          "blocked": false
+        },
+        {
+          "name": "Google-Extended",
+          "status": "no_explicit",
+          "blocked": false
+        },
+        {
+          "name": "CCBot",
+          "status": "no_explicit",
+          "blocked": false
+        }
+      ],
+      "default_rules": {
+        "allow": true,
+        "disallow_all": null,
+        "rules": [
+          [
+            "allow",
+            "/"
+          ]
+        ]
+      },
+      "blocked_crawlers": [],
+      "no_explicit_crawlers": [
+        "GPTBot",
+        "ChatGPT-User",
+        "OAI-SearchBot",
+        "ClaudeBot",
+        "Claude-Web",
+        "anthropic-ai",
+        "PerplexityBot",
+        "Google-Extended",
+        "CCBot"
+      ]
+    },
+    "rendering": [
+      {
+        "url": "https://pnwoutdooradventures.pages.dev/",
+        "ssr": true,
+        "word_count_raw_html": 356,
+        "note": "content in raw HTML"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/",
+        "ssr": true,
+        "word_count_raw_html": 104,
+        "note": "content in raw HTML"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/blog/",
+        "ssr": null,
+        "note": "fetch error: HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/blog/lake-serene-trail-guide/",
+        "ssr": null,
+        "note": "fetch error: HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/camping/",
+        "ssr": null,
+        "note": "fetch error: HTTP Error 404: Not Found"
+      }
+    ],
+    "csr_pages": [],
+    "schema": [
+      {
+        "url": "https://pnwoutdooradventures.pages.dev/",
+        "has_jsonld": true,
+        "types": [
+          "WebSite"
+        ]
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/",
+        "has_jsonld": false,
+        "types": []
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/blog/",
+        "has_jsonld": false,
+        "types": [],
+        "note": "fetch error: HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/blog/lake-serene-trail-guide/",
+        "has_jsonld": false,
+        "types": [],
+        "note": "fetch error: HTTP Error 429: Too Many Requests"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/camping/",
+        "has_jsonld": false,
+        "types": [],
+        "note": "fetch error: HTTP Error 404: Not Found"
+      }
+    ],
+    "schema_missing_pages": [
+      "https://pnwoutdooradventures.com/",
+      "https://pnwoutdooradventures.com/blog/",
+      "https://pnwoutdooradventures.com/blog/lake-serene-trail-guide/",
+      "https://pnwoutdooradventures.com/camping/"
+    ],
+    "citability": [
+      {
+        "url": "https://pnwoutdooradventures.pages.dev/",
+        "first_words": "PNW Outdoor Adventures Pacific Northwest Explore the Wild Pacific Northwest Your complete guide to hiking, camping, and outdoor adventures in Washingt",
+        "direct_answer_score": 40,
+        "note": "heuristic only \u2014 LLM scores citability later"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/",
+        "first_words": "pnwoutdooradventures.com Launching Soon Launching Soon Launching Soon Launching Soon Launching Soon Launching Soon Launching Soon Launching Soon Conta",
+        "direct_answer_score": 40,
+        "note": "heuristic only \u2014 LLM scores citability later"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/blog/",
+        "first_words": "",
+        "direct_answer_score": null,
+        "note": "fetch error: HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/blog/lake-serene-trail-guide/",
+        "first_words": "",
+        "direct_answer_score": null,
+        "note": "fetch error: HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://pnwoutdooradventures.com/camping/",
+        "first_words": "",
+        "direct_answer_score": null,
+        "note": "fetch error: HTTP Error 404: Not Found"
+      }
+    ],
+    "geo_score_estimate": 15,
+    "note": "Score heur\u00edstico determinista; el LLM interpreta citabilidad y entidad despu\u00e9s"
+  }
+}
