@@ -1,0 +1,97 @@
+---
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+
+const trail = {
+  title: "Wallace Falls Trail",
+  description: "Wallace Falls is a spectacular waterfall hike near Seattle with three distinct viewpoints. 5.6 miles roundtrip, perfect for families and beginners.",
+  image: "https://images.unsplash.com/photo-1432405972618-c6b0c0d40b2f?w=1200",
+  location: "Gold Bar, WA",
+  distance: "5.6 miles roundtrip",
+  elevation: "1,300 ft",
+  difficulty: "moderate" as const,
+  time: "3-4 hours",
+};
+---
+
+<ArticleLayout {...trail}>
+  <!-- Quick Verdict -->
+  <div class="p-6 bg-green-50 rounded-2xl mb-10">
+    <h2 class="text-xl font-bold text-gray-900 mb-2">The Bottom Line</h2>
+    <p class="text-gray-700">Three waterfalls for the price of one. Wallace Falls gives you options—lower, middle, and upper falls—so you can customize your effort level. The middle falls is the sweet spot for most people.</p>
+    <div class="mt-4 flex flex-wrap gap-4 text-sm">
+      <span class="px-3 py-1 bg-white rounded-full">✓ Three different waterfall viewpoints</span>
+      <span class="px-3 py-1 bg-white rounded-full">✓ Beautiful forest setting</span>
+      <span class="px-3 py-1 bg-white rounded-full">✓ Good for varying fitness levels</span>
+      <span class="px-3 py-1 bg-white rounded-full">✓ Less crowded than comparable hikes</span>
+    </div>
+  </div>
+
+  <!-- Overview -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">What You're Getting Into</h2>
+    <p class="text-gray-600 mb-4">Easy access, great for kids. Solid waterfall view.</p>
+    <!-- Quick Facts -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 p-4 bg-gray-50 rounded-xl">
+      <div>
+        <p class="text-sm text-gray-500">Distance</p>
+        <p class="font-medium">5.6 miles roundtrip</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Elevation Gain</p>
+        <p class="font-medium">1,300 ft</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Difficulty</p>
+        <p class="font-medium">Moderate</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Time</p>
+        <p class="font-medium">3-4 hours</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Trail -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">The Trail</h2>
+    <div class="space-y-6">
+      <div class="p-4 border-l-4 border-primary">
+        <h3 class="font-semibold text-gray-900">Lower Falls (Mile 1)</h3>
+        <p class="text-gray-600 mt-2">Easy access, great for kids. Solid waterfall view.</p>
+      </div>
+      <div class="p-4 border-l-4 border-primary">
+        <h3 class="font-semibold text-gray-900">Middle Falls (Mile 2)</h3>
+        <p class="text-gray-600 mt-2">The crowd favorite. Best balance of effort vs. reward.</p>
+      </div>
+      <div class="p-4 border-l-4 border-primary">
+        <h3 class="font-semibold text-gray-900">Upper Falls (Mile 2.8)</h3>
+        <p class="text-gray-600 mt-2">For the ambitious. Steep but you'll practically have it to yourself.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pro Tips -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Pro Tips</h2>
+    <div class="space-y-3">
+      <div class="p-4 bg-blue-50 rounded-xl">
+        <p class="text-blue-800">💡 Start with middle falls, decide if you want more</p>
+      </div>
+      <div class="p-4 bg-blue-50 rounded-xl">
+        <p class="text-blue-800">💡 Best photos at middle falls viewpoint</p>
+      </div>
+      <div class="p-4 bg-blue-50 rounded-xl">
+        <p class="text-blue-800">💡 The trail to upper falls is worth it if you're feeling strong</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="p-8 bg-primary rounded-2xl text-center">
+    <h3 class="text-xl font-bold text-white mb-3">Ready to Hit the Trail?</h3>
+    <p class="text-white/80 mb-4">Download our complete PNW trail guide with 50+ hikes.</p>
+    <a href="/products/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+      Get the Trail Guide — $29
+    </a>
+  </section>
+</ArticleLayout>

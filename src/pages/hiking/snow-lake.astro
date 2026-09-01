@@ -1,0 +1,97 @@
+---
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+
+const trail = {
+  title: "Snow Lake Trail",
+  description: "Snow Lake Trail is one of the best alpine lake hikes near Seattle. 7 miles roundtrip with stunning views of a glacial lake surrounded by towering peaks. Complete guide with difficulty, best time to visit, and insider tips.",
+  image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200",
+  location: "Snoqualmie Pass, WA",
+  distance: "7 miles roundtrip",
+  elevation: "1,800 ft",
+  difficulty: "moderate" as const,
+  time: "4-5 hours",
+};
+---
+
+<ArticleLayout {...trail}>
+  <!-- Quick Verdict -->
+  <div class="p-6 bg-green-50 rounded-2xl mb-10">
+    <h2 class="text-xl font-bold text-gray-900 mb-2">The Bottom Line</h2>
+    <p class="text-gray-700">If you want that 'wow' factor without a multi-day commitment, Snow Lake delivers. Yes, it's 7 miles. Yes, your legs will feel it. But when you round that last corner and see a pristine alpine lake nestled between jagged peaks? Worth every step.</p>
+    <div class="mt-4 flex flex-wrap gap-4 text-sm">
+      <span class="px-3 py-1 bg-white rounded-full">✓ Alpine lake swimming (if you're brave)</span>
+      <span class="px-3 py-1 bg-white rounded-full">✓ Mountain views for days</span>
+      <span class="px-3 py-1 bg-white rounded-full">✓ Less crowded than Rattlesnake</span>
+      <span class="px-3 py-1 bg-white rounded-full">✓ Multiple lakes on one trail</span>
+    </div>
+  </div>
+
+  <!-- Overview -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">What You're Getting Into</h2>
+    <p class="text-gray-600 mb-4">Don't sugarcoat it—this part is all uphill. But it's through beautiful forest with occasional peek-through views. Take breaks, drink water, you'll earn the payoff.</p>
+    <!-- Quick Facts -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 p-4 bg-gray-50 rounded-xl">
+      <div>
+        <p class="text-sm text-gray-500">Distance</p>
+        <p class="font-medium">7 miles roundtrip</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Elevation Gain</p>
+        <p class="font-medium">1,800 ft</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Difficulty</p>
+        <p class="font-medium">Moderate</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Time</p>
+        <p class="font-medium">4-5 hours</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Trail -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">The Trail</h2>
+    <div class="space-y-6">
+      <div class="p-4 border-l-4 border-primary">
+        <h3 class="font-semibold text-gray-900">Mile 0-2: The Climb</h3>
+        <p class="text-gray-600 mt-2">Don't sugarcoat it—this part is all uphill. But it's through beautiful forest with occasional peek-through views. Take breaks, drink water, you'll earn the payoff.</p>
+      </div>
+      <div class="p-4 border-l-4 border-primary">
+        <h3 class="font-semibold text-gray-900">Mile 2-3: The Ridge</h3>
+        <p class="text-gray-600 mt-2">You'll pop above treeline and the views open up. Keep going—you're almost there.</p>
+      </div>
+      <div class="p-4 border-l-4 border-primary">
+        <h3 class="font-semibold text-gray-900">Mile 3.5: Snow Lake</h3>
+        <p class="text-gray-600 mt-2">The lake appears like something from a movie. Turquoise water, snow-capped peaks, total silence. Find a rock, sit down, and soak it in.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pro Tips -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Pro Tips</h2>
+    <div class="space-y-3">
+      <div class="p-4 bg-blue-50 rounded-xl">
+        <p class="text-blue-800">💡 Bring lunch—you'll want to stay awhile</p>
+      </div>
+      <div class="p-4 bg-blue-50 rounded-xl">
+        <p class="text-blue-800">💡 Swimsuit optional but recommended in August</p>
+      </div>
+      <div class="p-4 bg-blue-50 rounded-xl">
+        <p class="text-blue-800">💡 Sunscreen is mandatory above treeline</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="p-8 bg-primary rounded-2xl text-center">
+    <h3 class="text-xl font-bold text-white mb-3">Ready to Hit the Trail?</h3>
+    <p class="text-white/80 mb-4">Download our complete PNW trail guide with 50+ hikes.</p>
+    <a href="/products/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+      Get the Trail Guide — $29
+    </a>
+  </section>
+</ArticleLayout>

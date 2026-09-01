@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<BaseLayout
+  title="Snoqualmie Pass Skiing"
+  description="Snoqualmie Pass is the closest ski area to Seattle—just 1 hour away. Guide to terrain, night skiing, and family-friendly options."
+>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative h-[400px] md:h-[500px] flex items-center">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1920"
+        alt="Snoqualmie Pass Skiing"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70"></div>
+    </div>
+    <div class="container-custom relative z-10">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Snoqualmie Pass Skiing
+        </h1>
+        <p class="text-lg text-white/80">When you want to ski but don't want to commit to a full day of driving, Snoqualmie delivers. It's close, it's affordable, and it's perfect for after-work laps or teaching the kids.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="section-padding bg-white">
+    <div class="container-custom max-w-4xl">
+      <p class="text-gray-600 text-lg leading-relaxed mb-8">When you want to ski but don't want to commit to a full day of driving, Snoqualmie delivers. It's close, it's affordable, and it's perfect for after-work laps or teaching the kids.</p>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Quick Facts</h2>
+      <div class="grid md:grid-cols-2 gap-6 mb-10">
+        <div class="p-5 bg-gray-50 rounded-xl">
+          <h3 class="font-semibold text-gray-900 mb-2">📍 Location</h3>
+          <p class="text-gray-600 text-sm">Stevens Pass, WA — 2 hours from Seattle via US-2</p>
+        </div>
+        <div class="p-5 bg-gray-50 rounded-xl">
+          <h3 class="font-semibold text-gray-900 mb-2">⛷️ Terrain</h3>
+          <p class="text-gray-600 text-sm">52 runs, 1,800 acres, 3,500 ft vertical drop</p>
+        </div>
+        <div class="p-5 bg-gray-50 rounded-xl">
+          <h3 class="font-semibold text-gray-900 mb-2">❄️ Snowfall</h3>
+          <p class="text-gray-600 text-sm">450 inches average annually</p>
+        </div>
+        <div class="p-5 bg-gray-50 rounded-xl">
+          <h3 class="font-semibold text-gray-900 mb-2">💰 Day Pass</h3>
+          <p class="text-gray-600 text-sm">$80-170 depending on date</p>
+        </div>
+      </div>
+      
+      <!-- CTA -->
+      <div class="p-8 bg-primary rounded-2xl text-center">
+        <h3 class="text-xl font-bold text-white mb-3">Get Our Winter Sports Guide</h3>
+        <p class="text-white/80 mb-4">Complete comparison of all PNW ski resorts with tips and deals.</p>
+        <a href="/products/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+          Download Guide — $29
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

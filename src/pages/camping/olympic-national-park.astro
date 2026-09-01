@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<BaseLayout
+  title="Olympic National Park Camping"
+  description="Complete guide to camping in Olympic National Park—from rainforest to coast to mountains. Reservation tips, best campgrounds, and what to expect."
+>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative h-[400px] md:h-[500px] flex items-center">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1920"
+        alt="Olympic National Park Camping"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70"></div>
+    </div>
+    <div class="container-custom relative z-10">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Olympic National Park Camping
+        </h1>
+        <p class="text-lg text-white/80">Olympic National Park is three parks in one: temperate rainforest, rugged coastline, and alpine mountains. Camping here is an experience you won't forget—but it requires planning. Here's everything you need to know to make it happen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="section-padding bg-white">
+    <div class="container-custom max-w-4xl">
+      <div class="prose prose-lg">
+        <p class="text-gray-600 text-lg leading-relaxed">Olympic National Park is three parks in one: temperate rainforest, rugged coastline, and alpine mountains. Camping here is an experience you won't forget—but it requires planning. Here's everything you need to know to make it happen.</p>
+        
+        <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Key Information</h2>
+        <div class="grid md:grid-cols-2 gap-6 not-prose">
+          <div class="p-5 bg-gray-50 rounded-xl">
+            <h3 class="font-semibold text-gray-900 mb-2">📅 Best Time to Visit</h3>
+            <p class="text-gray-600 text-sm">June through September for best weather. Book reservations 6+ months in advance for summer weekends.</p>
+          </div>
+          <div class="p-5 bg-gray-50 rounded-xl">
+            <h3 class="font-semibold text-gray-900 mb-3">💰 Cost</h3>
+            <p class="text-gray-600 text-sm">National Park entrance: $30/vehicle. Camping: $20-35/night depending on site.</p>
+          </div>
+          <div class="p-5 bg-gray-50 rounded-xl">
+            <h3 class="font-semibold text-gray-900 mb-3">🎟️ Reservations</h3>
+            <p class="text-gray-600 text-sm">Book at recreation.gov. Popular sites fill within minutes of opening. Set alarms.</p>
+          </div>
+          <div class="p-5 bg-gray-50 rounded-xl">
+            <h3 class="font-semibold text-gray-900 mb-3">🚗 Getting There</h3>
+            <p class="text-gray-600 text-sm">2-3 hours from Seattle depending on which area you're visiting.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- CTA -->
+      <div class="mt-12 p-8 bg-primary rounded-2xl text-center">
+        <h3 class="text-xl font-bold text-white mb-3">Get Our Complete Camping Guide</h3>
+        <p class="text-white/80 mb-4">20+ campgrounds with reviews, maps, and reservation tips.</p>
+        <a href="/products/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+          Download Guide — $29
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

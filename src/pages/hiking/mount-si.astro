@@ -1,0 +1,93 @@
+---
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+
+const trail = {
+  title: "Mount Si Trail",
+  description: "Mount Si is Seattle's most iconic day hike—a challenging 8-mile climb to a rocky summit with panoramic views of the Cascades. Complete guide for tackling this local favorite.",
+  image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200",
+  location: "North Bend, WA",
+  distance: "8 miles roundtrip",
+  elevation: "3,150 ft",
+  difficulty: "hard" as const,
+  time: "5-7 hours",
+};
+---
+
+<ArticleLayout {...trail}>
+  <!-- Quick Verdict -->
+  <div class="p-6 bg-green-50 rounded-2xl mb-10">
+    <h2 class="text-xl font-bold text-gray-900 mb-2">The Bottom Line</h2>
+    <p class="text-gray-700">This is Seattle's rite of passage. If you live here and haven't done Mount Si, people will look at you funny. It's hard, it's crowded, and the summit views make you forget the pain. Do it once to earn your local badge.</p>
+    <div class="mt-4 flex flex-wrap gap-4 text-sm">
+      <span class="px-3 py-1 bg-white rounded-full">✓ Summit views of Mount Rainier</span>
+      <span class="px-3 py-1 bg-white rounded-full">✓ Iconic Seattle hike</span>
+      <span class="px-3 py-1 bg-white rounded-full">✓ Great workout</span>
+      <span class="px-3 py-1 bg-white rounded-full">✓ Sense of accomplishment</span>
+    </div>
+  </div>
+
+  <!-- Overview -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">What You're Getting Into</h2>
+    <p class="text-gray-600 mb-4"> relentless switchbacks through forest. This is where most people question their life choices. Push through.</p>
+    <!-- Quick Facts -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 p-4 bg-gray-50 rounded-xl">
+      <div>
+        <p class="text-sm text-gray-500">Distance</p>
+        <p class="font-medium">8 miles roundtrip</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Elevation Gain</p>
+        <p class="font-medium">3,150 ft</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Difficulty</p>
+        <p class="font-medium">Hard</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Time</p>
+        <p class="font-medium">5-7 hours</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Trail -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">The Trail</h2>
+    <div class="space-y-6">
+      <div class="p-4 border-l-4 border-primary">
+        <h3 class="font-semibold text-gray-900">Mile 0-3: The Grind</h3>
+        <p class="text-gray-600 mt-2"> relentless switchbacks through forest. This is where most people question their life choices. Push through.</p>
+      </div>
+      <div class="p-4 border-l-4 border-primary">
+        <h3 class="font-semibold text-gray-900">Mile 3-3.5: The Haystack</h3>
+        <p class="text-gray-600 mt-2">You'll see 'The Haystack'—a rocky outcrop that's the true summit. Scramble to the top for 360° views.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pro Tips -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Pro Tips</h2>
+    <div class="space-y-3">
+      <div class="p-4 bg-blue-50 rounded-xl">
+        <p class="text-blue-800">💡 Start at 6am on weekends</p>
+      </div>
+      <div class="p-4 bg-blue-50 rounded-xl">
+        <p class="text-blue-800">💡 Bring more water than you think</p>
+      </div>
+      <div class="p-4 bg-blue-50 rounded-xl">
+        <p class="text-blue-800">💡 Trekking poles save your knees</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="p-8 bg-primary rounded-2xl text-center">
+    <h3 class="text-xl font-bold text-white mb-3">Ready to Hit the Trail?</h3>
+    <p class="text-white/80 mb-4">Download our complete PNW trail guide with 50+ hikes.</p>
+    <a href="/products/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+      Get the Trail Guide — $29
+    </a>
+  </section>
+</ArticleLayout>

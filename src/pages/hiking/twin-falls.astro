@@ -1,0 +1,297 @@
+---
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+
+const trail = {
+  title: "Twin Falls Trail",
+  description: "Twin Falls Trail is one of the most popular hikes near Seattle, featuring a stunning 200-foot waterfall just 30 minutes from the city. Complete guide with parking tips, trail conditions, and what to expect.",
+  image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=1200",
+  location: "Snoqualmie, WA",
+  distance: "2.6 miles roundtrip",
+  elevation: "500 ft",
+  difficulty: "easy" as const,
+  time: "1.5-2 hours",
+};
+---
+
+<ArticleLayout {...trail}>
+  <!-- Quick Verdict -->
+  <div class="p-6 bg-green-50 rounded-2xl mb-10">
+    <h2 class="text-xl font-bold text-gray-900 mb-2">The Bottom Line</h2>
+    <p class="text-gray-700">
+      <strong>Worth it?</strong> Absolutely. Twin Falls delivers a legit 200-foot waterfall for minimal effort. It's the perfect "I want to hike but not die" option. The trail is well-maintained, the waterfall is impressive, and you'll be back at your car in under 2 hours.
+    </p>
+    <div class="mt-4 flex flex-wrap gap-4 text-sm">
+      <span class="px-3 py-1 bg-white rounded-full">✓ Family friendly</span>
+      <span class="px-3 py-1 bg-white rounded-full">✓ Dog friendly (leash)</span>
+      <span class="px-3 py-1 bg-white rounded-full">✓ Kid tested</span>
+      <span class="px-3 py-1 bg-white rounded-full">✓ Year-round</span>
+    </div>
+  </div>
+
+  <!-- Overview -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">What You're Getting Into</h2>
+    <p class="text-gray-600 mb-4">
+      Look, if you've never hiked before and you're wondering where to start—this is it. Twin Falls is basically the training wheels of Pacific Northwest hiking, but in the best way possible. You get a legit waterfall, real forest vibes, and enough exercise to feel accomplished without wanting to quit halfway through.
+    </p>
+    <p class="text-gray-600 mb-4">
+      The trail follows the South Fork Snoqualmie River through second-growth forest before reaching two viewing platforms that give you different perspectives of the falls. The first viewpoint is about 0.7 miles in (good for strollers), and the second requires a bit more climbing but gives you the full 200-foot cascade.
+    </p>
+
+    <!-- Quick Facts -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 p-4 bg-gray-50 rounded-xl">
+      <div>
+        <p class="text-sm text-gray-500">Distance</p>
+        <p class="font-medium">2.6 miles RT</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Elevation Gain</p>
+        <p class="font-medium">500 ft</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Difficulty</p>
+        <p class="font-medium">Easy</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Time</p>
+        <p class="font-medium">1.5-2 hours</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parking & Getting There -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Parking: The Part Nobody Talks About</h2>
+    <p class="text-gray-600 mb-4">
+      Here's what most guides won't tell you: the parking situation at Twin Falls can make or break your experience. The lot holds about 50 cars and it fills up FAST on weekends. We're talking 8am-early crowded.
+    </p>
+    <p class="text-gray-600 mb-4">
+      <strong>Our move:</strong> Arrive before 8am on weekends or hit it on a weekday afternoon. If the main lot is full, there's overflow parking about 0.3 miles down the road—not ideal, but better than circling for 30 minutes.
+    </p>
+    <div class="p-4 bg-yellow-50 rounded-xl">
+      <p class="text-yellow-800 font-medium">⚠️ Important: You need a Discover Pass ($30/year or $10/day) for parking at the trailhead. Rangers do check.</p>
+    </div>
+
+    <div class="mt-6">
+      <h3 class="font-semibold text-lg text-gray-900 mb-2">Getting There from Seattle</h3>
+      <p class="text-gray-600">
+        Take I-90 East to Exit 52 (North Bend). Turn left onto SE Mount Si Road, then right onto SE Middle Fork Road. Follow for about 2 miles to the trailhead. Total drive: 30-40 minutes depending on traffic.
+      </p>
+    </div>
+  </section>
+
+  <!-- Trail Description -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">The Trail: Mile by Mile</h2>
+    
+    <div class="space-y-6">
+      <div class="p-4 border-l-4 border-primary">
+        <h3 class="font-semibold text-gray-900">Mile 0-0.7: The Easy Part</h3>
+        <p class="text-gray-600 mt-2">
+          Wide, flat trail through forest. You'll cross a couple of bridges with river views. This section is stroller-friendly if you've got little ones. The path is well-maintained—no scrambling or obstacles here.
+        </p>
+      </div>
+
+      <div class="p-4 border-l-4 border-primary">
+        <h3 class="font-semibold text-gray-900">Mile 0.7-1.0: First Viewpoint</h3>
+        <p class="text-gray-600 mt-2">
+          You'll reach a wooden viewing platform with a partial view of the falls. Good photo spot, but don't stop here—the best is still ahead. If you've got very young kids or mobility issues, this is a solid turnaround point.
+        </p>
+      </div>
+
+      <div class="p-4 border-l-4 border-primary">
+        <h3 class="font-semibold text-gray-900">Mile 1.0-1.3: The Climb</h3>
+        <p class="text-gray-600 mt-2">
+          Trail gets steeper with some wooden stairs. Nothing crazy, but you'll feel it if you're not used to hills. Take your time—there's no rush. The canopy opens up and you start hearing the falls before you see them.
+        </p>
+      </div>
+
+      <div class="p-4 border-l-4 border-green-500">
+        <h3 class="font-semibold text-gray-900">Mile 1.3: THE VIEW 🎉</h3>
+        <p class="text-gray-600 mt-2">
+          The main viewing platform. This is it—200 feet of cascading water surrounded by moss-covered rocks and old-growth trees. On a sunny day, you might catch a rainbow in the mist. Spend some time here. Take the photos. You earned them.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Talk Section -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Real Talk: What Actually Matters</h2>
+    
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="p-5 bg-green-50 rounded-xl">
+        <h3 class="font-semibold text-green-800 mb-2">👍 The Good Stuff</h3>
+        <ul class="space-y-2 text-green-700 text-sm">
+          <li>• Impressive waterfall for minimal effort</li>
+          <li>• Well-maintained trail, no surprises</li>
+          <li>• Great for first-timers and families</li>
+          <li>• Beautiful forest scenery year-round</li>
+          <li>• Close to Seattle (30 min)</li>
+        </ul>
+      </div>
+      
+      <div class="p-5 bg-yellow-50 rounded-xl">
+        <h3 class="font-semibold text-yellow-800 mb-2">⚠️ The Not-So-Good</h3>
+        <ul class="space-y-2 text-yellow-700 text-sm">
+          <li>• Parking fills up early on weekends</li>
+          <li>• Can be crowded (you'll see lots of people)</li>
+          <li>• Trail gets muddy after rain</li>
+          <li>• First section is a bit boring</li>
+          <li>• Bug spray needed in summer</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- When to Go -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">When to Go (And When to Avoid)</h2>
+    
+    <div class="space-y-4">
+      <div class="p-4 bg-gray-50 rounded-xl">
+        <h3 class="font-semibold text-gray-900">🌸 Spring (March-May)</h3>
+        <p class="text-gray-600 text-sm mt-1">Waterfall at peak flow from snowmelt. Trail can be muddy. Wildflowers starting to bloom. Fewer crowds than summer.</p>
+      </div>
+      
+      <div class="p-4 bg-gray-50 rounded-xl">
+        <h3 class="font-semibold text-gray-900">☀️ Summer (June-August)</h3>
+        <p class="text-gray-600 text-sm mt-1">Best weather, driest trail. Most crowded time. Arrive early or go weekday. Waterfall flow decreases but still impressive.</p>
+      </div>
+      
+      <div class="p-4 bg-gray-50 rounded-xl">
+        <h3 class="font-semibold text-gray-900">🍂 Fall (September-November)</h3>
+        <p class="text-gray-600 text-sm mt-1">Beautiful fall colors. Crowds thin out. Weather unpredictable—bring layers. Waterfall picks up again with fall rains.</p>
+      </div>
+      
+      <div class="p-4 bg-gray-50 rounded-xl">
+        <h3 class="font-semibold text-gray-900">❄️ Winter (December-February)</h3>
+        <p class="text-gray-600 text-sm mt-1">Trail can be icy—microspikes recommended. Magical with snow. Waterfall partially frozen. Very few people.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Bring -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">What to Bring</h2>
+    
+    <div class="p-6 bg-gray-50 rounded-2xl">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-3">The Essentials</h3>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Sturdy shoes (trail runners OK, no sandals)
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Water bottle (1 liter minimum)
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Discover Pass ($10/day or $30/year)
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-3">Nice to Have</h3>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-gray-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Snacks (trail mix, fruit)
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-gray-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Rain jacket (PNW weather)
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-gray-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Camera (the waterfall is photogenic)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pro Tips -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Pro Tips From Locals</h2>
+    
+    <div class="space-y-4">
+      <div class="p-4 bg-blue-50 rounded-xl">
+        <p class="text-blue-800">
+          <strong>🏷️ Free parking hack:</strong> If you have a Washington State Parks pass or an America the Beautiful pass, it works here too. Save $10.
+        </p>
+      </div>
+      
+      <div class="p-4 bg-blue-50 rounded-xl">
+        <p class="text-blue-800">
+          <strong>📸 Best photo time:</strong> Golden hour (1-2 hours before sunset) creates beautiful light through the trees. The waterfall gets direct sun around 4-5pm in summer.
+        </p>
+      </div>
+      
+      <div class="p-4 bg-blue-50 rounded-xl">
+        <p class="text-blue-800">
+          <strong>🍜 Post-hike food:</strong> Hit up the Fall City Cafe (15 min away) for a burger. Or drive 5 minutes to Cascadia Pizza in North Bend.
+        </p>
+      </div>
+      
+      <div class="p-4 bg-blue-50 rounded-xl">
+        <p class="text-blue-800">
+          <strong>🔄 Combo hike:</strong> If you want more, continue past the falls to connecting trails. The Western Plateau Trail adds 2 miles and fewer people.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Common Questions</h2>
+    
+    <div class="space-y-6">
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-2">Is Twin Falls safe for kids?</h3>
+        <p class="text-gray-600">Yes! Kids 4+ can handle this trail easily. The path is wide and well-maintained. Just watch them near the viewpoints—there are railings but still, kids and drop-offs don't mix.</p>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-2">Can I bring my dog?</h3>
+        <p class="text-gray-600">Yep, dogs are allowed on leash. The trail is popular with dog owners so your pup will have company. Bring water for them—there's no dog fountain at the trailhead.</p>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-2">Is there cell service?</h3>
+        <p class="text-gray-600">Spotty. You'll get some signal at the trailhead but it fades in the forest. Download the trail map offline before you go.</p>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-2">How crowded does it get?</h3>
+        <p class="text-gray-600">On summer weekends, expect 100+ people on the trail. Weekday mornings are much quieter. The further you go from the trailhead, the fewer people you'll see.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="p-8 bg-primary rounded-2xl text-center">
+    <h3 class="text-xl font-bold text-white mb-3">Ready to Hit the Trail?</h3>
+    <p class="text-white/80 mb-4">Download our complete PNW trail guide with 50+ hikes, detailed maps, and insider tips.</p>
+    <a href="/products/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+      Get the Trail Guide — $29
+    </a>
+  </section>
+</ArticleLayout>
