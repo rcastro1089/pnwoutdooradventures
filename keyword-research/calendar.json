@@ -51,8 +51,9 @@
       "category": "trail-guide",
       "cluster": "hiking",
       "priority": 1,
-      "status": "planned",
-      "justification": "High volume (14K), LOW SEO difficulty (18). Easy win."
+      "status": "published",
+      "justification": "High volume (14K), LOW SEO difficulty (18). Easy win.",
+      "published_date": "2026-09-01"
     },
     {
       "week": 2,
@@ -292,7 +293,7 @@
       "cluster": "winter",
       "priority": 2,
       "status": "planned",
-      "justification": "Very low SEO (6).实用 content, high return visits."
+      "justification": "Very low SEO (6).\u5b9e\u7528 content, high return visits."
     },
     {
       "week": 10,
@@ -596,7 +597,7 @@
       "cluster": "hiking",
       "priority": 2,
       "status": "planned",
-      "justification": "Low SEO (6).实用 content, high search volume."
+      "justification": "Low SEO (6).\u5b9e\u7528 content, high search volume."
     },
     {
       "week": 19,
@@ -756,7 +757,7 @@
       "cluster": "hiking",
       "priority": 2,
       "status": "planned",
-      "justification": "Low SEO (7).实用 content, high return visits."
+      "justification": "Low SEO (7).\u5b9e\u7528 content, high return visits."
     },
     {
       "week": 24,
@@ -788,7 +789,7 @@
       "cluster": "winter",
       "priority": 2,
       "status": "planned",
-      "justification": "Low SEO (5). Evergreen实用 content."
+      "justification": "Low SEO (5). Evergreen\u5b9e\u7528 content."
     },
     {
       "week": 25,
