@@ -22,8 +22,8 @@ ga_id: ""
 deploy:
   target: cf-pages
   github_repo: rcastro1089/pnwoutdooradventures
-  cf_project_name: ""
-  prod_url: ""
+  cf_project_name: "pnwoutdooradventures"
+  prod_url: "https://pnwoutdooradventures.com"
 checks:
   disable: []
   thresholds:
@@ -31,5 +31,5 @@ checks:
 blog:
   enabled: true
   articles_count: 30
-  cron: 0 10 * * 3,6
+  cron: 0 9 * * 1,4
   tone: casual-magnetic

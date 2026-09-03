@@ -116,8 +116,9 @@
       "category": "trail-guide",
       "cluster": "hiking",
       "priority": 1,
-      "status": "planned",
-      "justification": "HIGHEST volume keyword (27K!). Gateway page for multiple trails."
+      "status": "published",
+      "justification": "HIGHEST volume keyword (27K!). Gateway page for multiple trails.",
+      "published_date": "2026-09-03"
     },
     {
       "week": 4,
