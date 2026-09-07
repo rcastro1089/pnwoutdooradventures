@@ -133,8 +133,9 @@
       "category": "trail-guide",
       "cluster": "hiking",
       "priority": 2,
-      "status": "planned",
-      "justification": "Low SEO (15). Unique fire lookout experience. Experienced ICP."
+      "status": "published",
+      "justification": "Low SEO (15). Unique fire lookout experience. Experienced ICP.",
+      "published_date": "2026-09-03"
     },
     {
       "week": 5,
