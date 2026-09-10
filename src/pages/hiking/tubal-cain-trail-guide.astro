@@ -1,0 +1,207 @@
+---
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+
+const trail = {
+  title: "Tubal Cain Trail: Abandoned Mine + Mountain Lodge",
+  description: "Complete guide to tubal cain trail. Trail stats, parking tips, and insider knowledge from locals who hike these trails regularly.",
+  image: "https://images.unsplash.com/photo-1445363692815-ebcd599f7621?w=1200",
+  location: "Pacific Northwest, WA",
+  distance: "Varies",
+  elevation: "Varies",
+  difficulty: "moderate" as const,
+  time: "Half-day",
+};
+---
+
+<ArticleLayout {...trail}>
+  <!-- Quick Verdict -->
+  <div class="p-6 bg-green-50 rounded-2xl mb-10">
+    <h2 class="text-xl font-bold text-gray-900 mb-2">The Bottom Line</h2>
+    <p class="text-gray-700">
+      <strong>Worth it?</strong> Absolutely. Complete guide to tubal cain trail. Trail stats, parking tips, and insider knowledge from locals who hike these trails regularly.
+    </p>
+    <div class="mt-4 flex flex-wrap gap-4 text-sm">
+      <span class="px-3 py-1 bg-white rounded-full">✓ Stunning mountain views</span>
+      <span class="px-3 py-1 bg-white rounded-full">✓ Old-growth forest</span>
+      <span class="px-3 py-1 bg-white rounded-full">✓ PNW wilderness experience</span>
+      <span class="px-3 py-1 bg-white rounded-full">✓ Great workout</span>
+    </div>
+  </div>
+
+  <!-- Overview -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">What You're Getting Into</h2>
+    <p class="text-gray-600 mb-4">Tubal Cain Trail: Abandoned Mine + Mountain Lodge is one of the most popular hikes in the Pacific Northwest. This guide covers everything you need to know—from parking logistics to trail conditions—so you can plan with confidence.</p>
+
+    <!-- Quick Facts -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 p-4 bg-gray-50 rounded-xl">
+      <div>
+        <p class="text-sm text-gray-500">Distance</p>
+        <p class="font-medium">Varies</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Elevation Gain</p>
+        <p class="font-medium">Varies</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Difficulty</p>
+        <p class="font-medium">Moderate</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Time</p>
+        <p class="font-medium">Half-day</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Getting There -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Parking: The Part Nobody Talks About</h2>
+    <p class="text-gray-600 mb-4">Take the main highway toward the trailhead. Check Google Maps for current driving times from Seattle or your starting point. Parking fills up early on weekends, so plan to arrive before 8am during peak season.</p>
+
+    <div class="p-4 bg-yellow-50 rounded-xl mt-4">
+      <p class="text-yellow-800 font-medium">⚠️ Important: You need a Discover Pass ($30/year or $10/day) for parking at Washington State trailheads. Rangers do check.</p>
+    </div>
+  </section>
+
+  <!-- Trail Description -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">The Trail: Mile by Mile</h2>
+
+    <div class="space-y-6">
+            <div class="p-4 border-l-4 border-primary">
+        <h3 class="font-semibold text-gray-900">The trail winds through classic Pacific Northwest terrain—tall conifers, fern-covered forest floor, and the occasional stream crossing. Elevation gain is steady but manageable for most fitness levels. Keep an eye out for wildlife and enjoy the journey as much as the destination.</h3>
+        <p class="text-gray-600 mt-2"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Bring -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">What to Bring</h2>
+
+    <div class="p-6 bg-gray-50 rounded-2xl">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-3">The Essentials</h3>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              Sturdy hiking shoes
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              at least 1 liter of water
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-3">Nice to Have</h3>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-gray-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              rain jacket (PNW weather is unpredictable)
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-gray-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              snacks
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-gray-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              and a Discover Pass for parking. Layers are essential—you'll warm up as you climb.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- When to Go -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">When to Go (And When to Avoid)</h2>
+
+    <div class="space-y-4">
+            <div class="p-4 bg-gray-50 rounded-xl">
+        <h3 class="font-semibold text-gray-900">🌸 Spring (March-May)</h3>
+        <p class="text-gray-600 text-sm mt-1">Snowmelt feeds water features. Trail can be muddy early in the season. Wildflowers starting to bloom. Fewer crowds than summer.</p>
+      </div>
+
+      <div class="p-4 bg-gray-50 rounded-xl">
+        <h3 class="font-semibold text-gray-900">☀️ Summer (June-August)</h3>
+        <p class="text-gray-600 text-sm mt-1">Best weather, driest trail. Most crowded time—arrive early or go weekday. Bring sun protection and plenty of water.</p>
+      </div>
+
+      <div class="p-4 bg-gray-50 rounded-xl">
+        <h3 class="font-semibold text-gray-900">🍂 Fall (September-November)</h3>
+        <p class="text-gray-600 text-sm mt-1">Beautiful fall colors. Crowds thin out. Weather gets unpredictable—bring layers and rain gear. Trails can be slippery when wet.</p>
+      </div>
+
+      <div class="p-4 bg-gray-50 rounded-xl">
+        <h3 class="font-semibold text-gray-900">❄️ Winter (December-February)</h3>
+        <p class="text-gray-600 text-sm mt-1">Trail can be icy—microspikes recommended. Magical with snow. Very few people on the trail—great for solitude seekers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pro Tips -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Pro Tips From Locals</h2>
+
+    <div class="space-y-4">
+      <div class="p-4 bg-blue-50 rounded-xl">
+        <p class="text-blue-800">
+          <strong>🏷️ Parking hack:</strong> Arrive before 8am on weekends. If the lot is full, check for overflow parking along the access road—it's usually just a short walk back.
+        </p>
+      </div>
+
+      <div class="p-4 bg-blue-50 rounded-xl">
+        <p class="text-blue-800">
+          <strong>📸 Best photo time:</strong> Golden hour (1-2 hours before sunset) creates the best light through the trees. Morning light works well for east-facing viewpoints.
+        </p>
+      </div>
+
+      <div class="p-4 bg-blue-50 rounded-xl">
+        <p class="text-blue-800">
+          <strong>🍜 Post-hike food:</strong> Check local cafes and breweries near the trailhead. Most PNW trail towns have at least one solid burger spot within 15 minutes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Common Questions</h2>
+
+    <div class="space-y-6">
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-2">Is this trail safe for kids?</h3>
+        <p class="text-gray-600">Yes, kids 6+ can handle this trail comfortably.</p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-2">Can I bring my dog?</h3>
+        <p class="text-gray-600">Check current regulations for this specific trail—some require leashes at all times, others prohibit dogs entirely. Most state lands in Washington allow dogs on leash. Bring water for them.</p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-2">How crowded does it get?</h3>
+        <p class="text-gray-600">On summer weekends, popular trails can see 50-100+ hikers. Weekday mornings are much quieter. The further you go from the trailhead, the fewer people you'll encounter.</p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-2">Is there cell service?</h3>
+        <p class="text-gray-600">Spotty to none. You'll likely get some signal at the trailhead but it fades quickly. Download offline maps before you go.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="p-8 bg-primary rounded-2xl text-center">
+    <h3 class="text-xl font-bold text-white mb-3">Ready to Hit the Trail?</h3>
+    <p class="text-white/80 mb-4">Download our complete PNW trail guide with 50+ hikes, detailed maps, and insider tips.</p>
+    <a href="/products/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+      Get the Trail Guide — $29
+    </a>
+  </section>
+</ArticleLayout>

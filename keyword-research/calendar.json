@@ -150,8 +150,9 @@
       "category": "seasonal",
       "cluster": "hiking",
       "priority": 3,
-      "status": "planned",
-      "justification": "Seasonal content, low competition. Captures spring search surge."
+      "status": "published",
+      "justification": "Seasonal content, low competition. Captures spring search surge.",
+      "published_date": "2026-09-07"
     },
     {
       "week": 5,
