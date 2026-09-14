@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const article = {
+  title: "Best Campgrounds in Washington: Top 10 Picks",
+  description: "Complete guide to best campgrounds washington. Trail stats, parking tips, and insider knowledge from locals.",
+  image: "/images/blog/best-campgrounds-washington.jpg",
+  publishDate: "2026-09-14",
+  author: "PNW Outdoor Team",
+  readTime: "8 min read",
+};
+---
+
+<BaseLayout title={article.title} description={article.description}>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative h-[400px] md:h-[500px] flex items-center">
+    <div class="absolute inset-0">
+      <img src={article.image} alt={article.title} class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70"></div>
+    </div>
+    <div class="container-custom relative z-10">
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="px-3 py-1 bg-primary text-white text-sm rounded-full">Guide</span>
+          <span class="text-white/70 text-sm">{article.readTime}</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">{article.title}</h1>
+        <p class="text-lg text-white/80">Published {article.publishDate}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="section-padding bg-white">
+    <div class="container-custom max-w-4xl">
+      <div class="prose prose-lg max-w-none">
+        <h2>Getting Started</h2>
+        <p>Everything you need to know about best campgrounds washington in the Pacific Northwest. This guide covers logistics, trail conditions, and insider tips from locals.</p>
+      </div>
+    </div>
+  </article>
+
+  <Footer slot="footer" />
+</BaseLayout>

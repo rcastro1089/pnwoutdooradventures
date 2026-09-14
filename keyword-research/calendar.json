@@ -167,8 +167,9 @@
       "category": "trail-guide",
       "cluster": "hiking",
       "priority": 3,
-      "status": "planned",
-      "justification": "VERY low SEO (7). Unique story (mine ruins). Differentiator."
+      "status": "published",
+      "justification": "VERY low SEO (7). Unique story (mine ruins). Differentiator.",
+      "published_date": "2026-09-10"
     },
     {
       "week": 6,
